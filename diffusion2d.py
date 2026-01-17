@@ -60,8 +60,8 @@ class SolveDiffusion2D:
 
         # Computing a stable time step
         dx2, dy2 = self.dx * self.dx, self.dy * self.dy
-        #self.dt = dx2 * dy2 / (2 * self.D * (dx2 + dy2))
-        self.dt = dx2 * dy2 / (self.D * (dx2 + dy2))  # Introduction of a bug on purpose to check integration tests
+        self.dt = dx2 * dy2 / (2 * self.D * (dx2 + dy2))
+        #self.dt = dx2 * dy2 / (self.D * (dx2 + dy2))  # Introduction of a bug on purpose to check integration tests
 
         print("dt = {}".format(self.dt))
 
