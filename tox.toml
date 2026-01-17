@@ -1,0 +1,8 @@
+requires = ["tox>=4"]
+env_list = ["py"]
+
+[testenv]
+description = "Runs tests automatically"
+deps = ["-rrequirements.txt"]
+setenv = {PYTHONPATH = "{toxindir}"}
+commands = [["pytest", "tests", "-v"]]

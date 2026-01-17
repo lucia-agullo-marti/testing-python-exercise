@@ -1,0 +1,5 @@
+numpy
+matplotlib
+pytest
+coverage
+tox>=4
