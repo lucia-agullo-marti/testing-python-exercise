@@ -46,7 +46,8 @@ class SolveDiffusion2D:
         self.h = h
         self.dx = dx
         self.dy = dy
-        self.nx = int(w / dx)
+        #self.nx = int(w / dx)
+        self.nx = int(h / dx) # Introduction of a bug on purpose to check unit tests
         self.ny = int(h / dy)
 
     def initialize_physical_parameters(self, d=4., T_cold=300., T_hot=700.):
