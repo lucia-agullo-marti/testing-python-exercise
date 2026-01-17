@@ -56,12 +56,13 @@ def test_set_initial_condition():
     ny = int (h / dy)
     expected_u = T_cold * np.ones((nx, ny))
 
+    r = 2
+    cx = 5
+    cy = 5
+    r2 = r ** 2
+
     for i in range(nx):
         for j in range(ny):
-            r = 2
-            cx = 5
-            cy = 5
-            r2 = r ** 2
             p2 = (i * dx - cx) ** 2 + (j * dy - cy) ** 2
             if p2 < r2:
                 expected_u[i, j] = T_hot
